@@ -1,0 +1,25 @@
+{
+  "articles": [
+    {
+      "id": "1",
+      "title": "Neue Studie zeigt Vorteile regelmäßiger Bewegung",
+      "summary": "Regelmäßige Bewegung verbessert die Herzgesundheit und das allgemeine Wohlbefinden.",
+      "url": "https://example.com/articles/bewegung-vorteile",
+      "publishedAt": "2026-01-01T08:30:00Z"
+    },
+    {
+      "id": "2",
+      "headline": "Gesunde Rezepte für die Woche",
+      "description": "Fünf schnelle, gesunde Rezepte, die sich leicht vorbereiten lassen.",
+      "link": "https://example.com/articles/rezepte-woche",
+      "date": "2025-12-28T12:00:00Z"
+    },
+    {
+      "id": "3",
+      "title": "Tipps zur Verbesserung des Schlafs",
+      "body": "Entdecken Sie einfache Änderungen in der Abendroutine, die die Schlafqualität verbessern.",
+      "url": "https://example.com/articles/schlaf-tipps",
+      "pubDate": "2025-12-20T22:15:00Z"
+    }
+  ]
+}

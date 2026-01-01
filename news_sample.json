@@ -1,21 +1,42 @@
 {
   "articles": [
+  {
+    "id": "1",
+    "title": "Rich Text Formatting",
+    "summary": "The news feed now supports **Markdown**!\n\nYou can use:\n- **Bold** text for emphasis\n- *Italic* text for style\n- [Inline Links](https://flutter.dev) for references",
+    "url": "https://flutter.dev",
+    "publishedAt": "2024-06-01T12:00:00Z"
+  },
+  {
+    "id": "2",
+    "title": "Images Support",
+    "summary": "Images can now be embedded directly in the summary text using Markdown syntax:\n\n![Flutter Logo](https://storage.googleapis.com/cms-storage-bucket/c823e53b3a1a7b0d36a9.png)\n\nThey render automatically within the list.",
+    "url": "https://pub.dev/packages/flutter_markdown",
+    "publishedAt": "2024-05-31T15:30:00Z"
+  },
+  {
+    "id": "3",
+    "title": "External Links & Navigation",
+    "summary": "This article demonstrates a standard news item. Clicking the card opens the main URL defined in the JSON. You can also have [links in the text](https://dart.dev) which open separately.",
+    "url": "https://dart.dev",
+    "publishedAt": "2024-05-30T09:00:00Z"
+  }
     {
-      "id": "1",
+      "id": "4",
       "title": "Neue Studie zeigt Vorteile regelmäßiger Bewegung",
       "summary": "Regelmäßige Bewegung verbessert die Herzgesundheit und das allgemeine Wohlbefinden.",
       "url": "https://example.com/articles/bewegung-vorteile",
       "publishedAt": "2026-01-01T08:30:00Z"
     },
     {
-      "id": "2",
+      "id": "5",
       "headline": "Gesunde Rezepte für die Woche",
       "description": "Fünf schnelle, gesunde Rezepte, die sich leicht vorbereiten lassen.",
       "link": "https://example.com/articles/rezepte-woche",
       "date": "2025-12-28T12:00:00Z"
     },
     {
-      "id": "3",
+      "id": "6",
       "title": "Tipps zur Verbesserung des Schlafs",
       "body": "Entdecken Sie einfache Änderungen in der Abendroutine, die die Schlafqualität verbessern.",
       "url": "https://example.com/articles/schlaf-tipps",

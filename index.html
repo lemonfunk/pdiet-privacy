@@ -3,76 +3,214 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datenschutzerklärung - pDiet</title>
+    <title>Die Physiker-Diät - Einfach & Effektiv Abnehmen</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-        h1 { border-bottom: 2px solid #eee; padding-bottom: 10px; color: #2e7d32; }
-        h2 { margin-top: 30px; color: #2c3e50; border-left: 4px solid #2e7d32; padding-left: 10px; }
-        h3 { color: #34495e; margin-top: 20px; }
-        .note { background: #f1f8e9; border-left: 5px solid #2e7d32; padding: 15px; margin: 20px 0; border-radius: 4px; }
-        ul { padding-left: 20px; }
-        li { margin-bottom: 8px; }
-        footer { margin-top: 50px; font-size: 0.85em; color: #7f8c8d; border-top: 1px solid #eee; padding-top: 20px; }
-        code { background: #f4f4f4; padding: 2px 5px; border-radius: 3px; font-family: monospace; }
-        a { color: #2e7d32; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #ffffff;
+        }
+
+        .hero {
+            background: #ffffff;
+            padding: 40px 20px 30px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .logo-container {
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            max-width: 450px;
+            width: 100%;
+            height: auto;
+        }
+
+        .tagline {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 25px;
+            font-weight: 300;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            background: #5cb85c;
+            color: white;
+            padding: 12px 30px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background: #4cae4c;
+            transform: translateY(-2px);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .feature {
+            background: #f8f8f8;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid #5cb85c;
+        }
+
+        .feature h3 {
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 8px;
+        }
+
+        .feature p {
+            color: #666;
+            font-size: 0.95em;
+        }
+
+        .info-box {
+            background: #f8f8f8;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border-left: 4px solid #5cb85c;
+        }
+
+        .info-box h2 {
+            color: #5cb85c;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .info-items {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .info-item {
+            text-align: center;
+            flex: 1;
+            min-width: 150px;
+        }
+
+        .info-icon {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .info-item h4 {
+            font-size: 1em;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .info-item p {
+            font-size: 0.85em;
+            color: #666;
+        }
+
+        .tester-section {
+            text-align: center;
+            padding: 35px;
+            background: #f8f8f8;
+            border-radius: 8px;
+            border: 2px solid #5cb85c;
+        }
+
+        .tester-section h2 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .tester-section p {
+            color: #666;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+
+        .email-highlight {
+            font-size: 1.3em;
+            color: #5cb85c;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .email-button {
+            background: #5cb85c;
+            color: white;
+            padding: 12px 35px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: 500;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .email-button:hover {
+            background: #4cae4c;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #2d2d2d;
+            color: #ccc;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85em;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                max-width: 100%;
+            }
+
+            .tagline {
+                font-size: 1em;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-items {
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="hero">
+        <div class="logo-container">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAfQAAAC0CAYAAABymQ+nAAAACXBIWXMAAAsTAAALEwEAmpwYAAAKT2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AUkSYqIQkQSoghodkVUcERRUUEG8igiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXXPues852zzwfACAyWSDNRNYAMqUIeEeCDx8TG4eQuQIEKJHAAEAizZCFz/SMBAPh+PDwrIsAHvgABeNMLCADATZvAMByH/w/qQplcAYCEAcB0kThLCIAUAEB6jkKmAEBGAYCdmCZTAKAEAGDLY2LjAFAtAGAnf+bTAICd+Jl7AQBblCEVAaCRACATZYhEAGg7AKzPVopFAFgwABRmS8Q5ANgtADBJV2ZIALC3AMDOEAuyAAgMADBRiIUpAAR7AGDIIyN4AISZABRG8lc88SuuEOcqAAB4mbI8uSQ5RYFbCC1xB1dXLh4ozkkXKxQ2YQJhmkAuwnmZGTKBNA/g88wAAKCRFRHgg/P9eM4Ors7ONo62Dl8t6r8G/yJiYuP+5c+rcEAAAOF0ftH+LC+zGoA7BoBt/qIl7gRoXgugdfeLZrIPQLUAoOnaV/Nw+H48PEWhkLnZ2eXk5NhKxEJbYcpXff5nwl/AV/1s+X48/Pf14L7iJIEyXYFHBPjgwsz0TKUcz5IJhGLc5o9H/LcL//wd0yLESWK5WCoU41EScY5EmozzMqUiiUKSKcUl0v9k4t8s+wM+3zUAsGo+AXuRLahdYwP2SycQWHTA4vcAAPK7b8HUKAgDgGiD4c93/+8//UegJQCAZkmScQAAXkQkLlTKsz/HCAAARKCBKrBBG/TBGCzABhzBBdzBC/xgNoRCJMTCQhBCCmSAHHJgKayCQiiGzbAdKmAv1EAdNMBRaIaTcA4uwlW4Dj1wD/phCJ7BKLyBCQRByAgTYSHaiAFiilgjjggXmYX4IcFIBBKLJCDJiBRRIkuRNUgxUopUIFVIHfI9cgI5h1xGupE7yAAygvyGvEcxlIGyUT3UDLVDuag3GoRGogvQZHQxmo8WoJvQcrQaPYw2oefQq2gP2o8+Q8cwwOgYBzPEbDAuxsNCsTgsCZNjy7EirAyrxhqwVqwDu4n1Y8+xdwQSgUXACTYEd0IgYR5BSFhMWE7YSKggHCQ0EdoJNwkDhFHCJyKTqEu0JroR+cQYYjIxh1hILCPWEo8TLxB7iEPENyQSiUMyJ7mQAkmxpFTSEtJG0m5SI+ksqZs0SBojk8naZGuyBzmULCAryIXkneTD5DPkG+Qh8lsKnWJAcaT4U+IoUspqShnlEOU05QZlmDJBVaOaUt2ooVQRNY9aQq2htlKvUYeoEzR1mjnNgxZJS6WtopXTGmgXaPdpr+h0uhHdlR5Ol9BX0svpR+iX6AP0dwwNhhWDx4hnKBmbGAcYZxl3GK+YTKYZ04sZx1QwNzHrmOeZD5lvVVgqtip8FZHKCpVKlSaVGyovVKmqpqreqgtV81XLVI+pXlN9rkZVM1PjqQnUlqtVqp1Q61MbU2epO6iHqmeob1Q/pH5Z/YkGWcNMw09DpFGgsV/jvMYgC2MZs3gsIWsNq4Z1gTXEJrHN2Xx2KruY/R27iz2qqaE5QzNKM1ezUvOUZj8H45hx+Jx0TgnnKKeX836K3hTvKeIpG6Y0TLkxZVxrqpaXllirSKtRq0frvTau7aedpr1Fu1n7gQ5Bx0onXCdHZ4/OBZ3nU9lT3acKpxZNPTr1ri6qa6UbobtEd79up+6Ynr5egJ5Mb6feeb3n+hx9L/1U/W36p/VHDFgGswwkBtsMzhg8xTVxbzwdL8fb8VFDXcNAQ6VhlWGX4YSRudE8o9VGjUYPjGnGXOMk423GbcajJgYmISZLTepN7ppSTbmmKaY7TDtMx83MzaLN1pk1mz0x1zLnm+eb15vft2BaeFostqi2uGVJsuRaplnutrxuhVo5WaVYVVpds0atna0l1rutu6cRp7lOk06rntZnw7Dxtsm2qbcZsOXYBtuutm22fWFnYhdnt8Wuw+6TvZN9un2N/T0HDYfZDqsdWh1+c7RyFDpWOt6azpzuP33F9JbpL2dYzxDP2DPjthPLKcRpnVOb00dnF2e5c4PziIuJS4LLLpc+Lpsbxt3IveRKdPVxXeF60vWdm7Obwu2o26/uNu5p7ofcn8w0nymeWTNz0MPIQ+BR5dE/C5+VMGvfrH5PQ0+BZ7XnIy9jL5FXrdewt6V3qvdh7xc+9j5yn+M+4zw33jLeWV/MN8C3yLfLT8Nvnl+F30N/I/9k/3r/0QCngCUBZwOJgUGBWwL7+Hp8Ib+OPzrbZfay2e1BjKC5QRVBj4KtguXBrSFoyOyQrSH355jOkc5pDoVQfujW0Adh5mGLw34MJ4WHhVeGP45wiFga0TGXNXfR3ENz30T6RJZE3ptnMU85ry1KNSo+qi5qPNo3ujS6P8YuZlnM1VidWElsSxw5LiquNm5svt/87fOH4p3iC+N7F5gvyF1weaHOwvSFpxapLhIsOpZATIhOOJTwQRAqqBaMJfITdyWOCnnCHcJnIi/RNtGI2ENcKh5O8kgqTXqS7JG8NXkkxTOlLOW5hCepkLxMDUzdmzqeFpp2IG0yPTq9MYOSkZBxQqohTZO2Z+pn5mZ2y6xlhbL+xW6Lty8elQfJa7OQrAVZLQq2QqboVFoo1yoHsmdlV2a/zYnKOZarnivN7cyzytuQN5zvn//tEsIS4ZK2pYZLVy0dWOa9rGo5sjxxedsK4xUFK4ZWBqw8uIq2Km3VT6vtV5eufr0mek1rgV7ByoLBtQFr6wtVCuWFfevc1+1dT1gvWd+1YfqGnRs+FYmKrhTbF5cVf9go3HjlG4dvyr+Z3JS0qavEuWTPZtJm6ebeLZ5bDpaql+aXDm4N2dq0Dd9WtO319kXbL5fNKNu7g7ZDuaO/PLi8ZafJzs07P1SkVPRU+lQ27tLdtWHX+G7R7ht7vPY07NXbW7z3/T7JvttVAVVN1WbVZftJ+7P3P66Jqun4lvttXa1ObXHtxwPSA/0HIw6217nU1R3SPVRSj9Yr60cOxx++/p3vdy0NNg1VjZzG4iNwRHnk6fcJ3/ceDTradox7rOEH0x92HWcdL2pCmvKaRptTmvtbYlu6T8w+0dbq3nr8R9sfD5w0PFl5SvNUyWna6YLTk2fyz4ydlZ19fi753GDborZ752PO32oPb++6EHTh0kX/i+c7vDvOXPK4dPKy2+UTV7hXmq86X23qdOo8/pPTT8e7nLuarrlca7nuer21e2b36RueN87d9L158Rb/1tWeOT3dvfN6b/fF9/XfFt1+cif9zsu72Xcn7q28T7xf9EDtQdlD3YfVP1v+3Njv3H9qwHeg89HcR/cGhYPP/pH1jw9DBY+Zj8uGDYbrnjg+OTniP3L96fynQ89kzyaeF/6i/suuFxYvfvjV69fO0ZjRoZfyl5O/bXyl/erA6xmv28bCxh6+yXgzMV70VvvtwXfcdx3vo98PT+R8IH8o/2j5sfVT0Kf7kxmTk/8EA5jz/GMzLdsAAAAgY0hSTQAAeiUAAICDAAD5/wAAgOkAAHUwAADqYAAAOpgAABdvkl/FRgAAD0lEQVR4nO3dz4tT9x7H8c+Zmek4JjPGaaUCFu5i7q7ZuCkurFAuXAiCCxUKXUixC+tu7qb/wKKLooi/UIWCLiwiuClIodgLxVXdiLgouJm5zJkzM3e+8YxOmjRJ5pzv55zz/X4+j8eIgiP5ms/5vH/kk1NVVSUAABDaUNsNAAAASxF0AAAyQNABAMgAQQcAIAMEHQCADBB0AAAyQNABAMgAQQcAIAMEHQCADBB0AAAyQNABAMgAQQcAIAMEHQCADBB0AAAyQNABAMgAQQcAIAMEHQCADBB0AAAyQNABAMgAQQcAIAMEHQCADBB0AAAyQNABAMhAp+0GAKC0qqrkcrmc+7EAC+9fJXj7e/8PL1/9Tt3u+rfX1tb0l7/+VZ1Op/a/Paquri7tH7qGK6oKQGh+4//gwUPlvbfT6WhpaUm3bt3SiRMntLy8rK6urjwDH0JVVao6nVpfX9eDBw+0tLSk77//XpOTk+nvHZrr16/r9OnT6nQ62tra0uXLl3Xt2rX+/1OVlJaWlvTvf/9bRwHEU1VV1dUVvr8Mw9B4u3YffaHCmVtfX9fMzIz+/X//p+vn35bbndfaqrlz5/Ttt9+qjcBfvPi6/vqXE4P/B5VUVaXbty7o+efumPsF+Pf+3//9q37ug1fk9ceff65vvvmmjU8F+P/Gx8e1tramiw0BV13jWnp9UyvL7xYPJdq2ubmpb//zH/3f/Pz2R+p2u3ru2MHtr/OTR45oamqKqNP9nbu95u/A8Hfgyq1buq6Tv+SJU9r/tzvTj/Y+rJGREXU6w/1fhpvqe+eS+/dM/Teg7g3h/uO2/uHBW9/+/Ny5c/rlySO9+WXvC6e6Q/vvh5/YcceeHxzT8PBo7T9zMBzr3tH/8l93/z3hZ2dnd4b+hx9+0PHjx/X06VOVElMgPD899pLef//9VvpOvzNH4G1cXdqZcN9++62qq99oZWVFo6N9wtj9yXXtn92vpaX+kc/+5+o93ft/Fhw/ufJXaGR0oq02qJjf0vj4eO0/s9/QX7x40foUA+FV/Y39D77fqd8CJVT979bz8tqS3jy7vz3ddv/9n+Rffvm5N/X/8uWLgv9p9s05f/311zoQvV1d6t+X6/+/jN7w7f/fYx/7fzM+Pk7U0alUv5uQk3Vg/V+w4eHhPkP/v+zzf1P/eQ3/LvX7Atu/P3UG+bLH/VxbUy8wk/9v1v7vQVt92P35eeL02zs93P18kf39Wlt7G+AfW+oAAKBhBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEEHACADBB0AgAwQdAAAMkDQAQDIAEE
 
-    <h1>Datenschutzerklärung</h1>
-
-    <p>Verantwortlicher im Sinne der Datenschutzgesetze, insbesondere der EU-Datenschutz-Grundverordnung (DSGVO), ist:</p>
-    <p>
-        <strong>Benjamin Gesemann</strong><br>
-        E-Mail: bgesemann@gmx.de
-    </p>
-
-    <div class="note">
-        Diese Datenschutzerklärung gibt Ihnen Auskunft darüber, wie wir mit personenbezogenen Daten innerhalb der App <strong>pDiet</strong> umgehen.
-    </div>
-
-    <h2>1. Ihre Betroffenenrechte</h2>
-    <p>Unter den angegebenen Kontaktdaten können Sie jederzeit folgende Rechte gemäß DSGVO ausüben:</p>
-    <ul>
-        <li><strong>Auskunft</strong> über Ihre bei uns gespeicherten Daten (Art. 15 DSGVO).</li>
-        <li><strong>Berichtigung</strong> unrichtiger Daten (Art. 16 DSGVO).</li>
-        <li><strong>Löschung</strong> Ihrer Daten, sofern keine gesetzlichen Aufbewahrungsfristen entgegenstehen (Art. 17 DSGVO).</li>
-        <li><strong>Einschränkung</strong> der Datenverarbeitung (Art. 18 DSGVO).</li>
-        <li><strong>Widerspruch</strong> gegen die Verarbeitung (Art. 21 DSGVO).</li>
-        <li><strong>Datenübertragbarkeit</strong> (Art. 20 DSGVO).</li>
-    </ul>
-
-    <h2>2. Verarbeitungstätigkeiten beim App-Betrieb</h2>
-
-    <h3>Bereitstellung dynamischer Inhalte (News-Feed)</h3>
-    <p><strong>Art und Zweck:</strong> Um aktuelle Informationen, Ernährungstipps und Bilder direkt in der App anzuzeigen, lädt die App regelmäßig Daten von unseren Servern nach. Beim Abruf dieser Dateien (z. B. <code>news_sample.json</code>) wird Ihre IP-Adresse technisch bedingt an den Server übertragen.</p>
-    <p><strong>Rechtsgrundlage:</strong> Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) an der Bereitstellung einer funktionalen und aktuellen App.</p>
-
-    <h3>Hosting über GitHub Pages</h3>
-    <p>Die Inhalte und Feeds werden auf Servern der <strong>GitHub Inc. (USA)</strong> gehostet. GitHub erhebt IP-Adressen und Zugriffszeiten in Log-Dateien, um den sicheren und stabilen Betrieb zu gewährleisten. GitHub ist unter dem <em>EU-U.S. Data Privacy Framework</em> zertifiziert.</p>
-
-    <h3>Nutzungsstatistiken und Analyse</h3>
-    <p><strong>Art und Zweck:</strong> Um die App zu verbessern, werten wir gelegentlich anonyme Zugriffsstatistiken aus (z. B. wie oft der News-Feed aufgerufen wurde). 
-    Hierbei werden <strong>keine</strong> persönlichen Profile erstellt. Die Auswertung erfolgt auf Basis der Server-Logfiles in anonymisierter Form (z. B. durch Kürzung der IP-Adresse), sodass kein Rückschluss auf einzelne Nutzer möglich ist.</p>
-    <p><strong>Rechtsgrundlage:</strong> Berechtigtes Interesse (Art. 6 Abs. 1 lit. f DSGVO) zur Optimierung unseres Angebots.</p>
-
-    <h2>3. Externe Links</h2>
-    <p>Inhalte im News-Feed können Links zu Webseiten Dritter enthalten. Durch Anklicken dieser Links verlassen Sie die App. Für die Datenverarbeitung auf den verlinkten Seiten sind die jeweiligen Betreiber verantwortlich.</p>
-
-    <h2>4. Information über Ihr Widerspruchsrecht</h2>
-    <p>Sie haben das Recht, aus Gründen, die sich aus Ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung Ihrer Daten Widerspruch einzulegen, sofern diese auf einer Interessenabwägung beruht.</p>
-    <p><strong>Kontakt für Widerspruch:</strong> bgesemann@gmx.de</p>
-
-    <hr>
-
-    <h2>5. Änderung unserer Datenschutzerklärung</h2>
-    <p>Wir behalten uns vor, diese Erklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um neue Funktionen (z. B. neue Services) abzubilden.</p>
-
-    <footer>
-        <p>Stand: Januar 2026</p>
-        <p>Erstellt unter Berücksichtigung der Vorlagen der activeMind AG und ergänzt um spezifische App-Funktionen.</p>
-    </footer>
-
-</body>
-</html>

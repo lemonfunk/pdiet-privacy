@@ -37,11 +37,9 @@
     header img {
       display: block;
       width: 100%;
-      max-width: 100%;
       height: auto;
       filter: drop-shadow(0 6px 10px rgba(0,0,0,0.08));
     }
-    
     .subtitle {
       color: var(--gray);
       max-width: 720px;
@@ -77,10 +75,11 @@
       gap: 1rem;
       margin-top: 1rem;
     }
-    .cta a {
+    .cta button {
       background: var(--green);
       color: #fff;
-      text-decoration: none;
+      border: none;
+      cursor: pointer;
       padding: 0.75rem 1.25rem;
       border-radius: 10px;
       font-weight: 600;
@@ -105,7 +104,7 @@
 <body>
   <main class="page">
     <header>
-      <img src="pdiet_header.png" alt="Die Physiker Diät Logo" />
+      <img src="logo_header.png" alt="Die Physiker Diät Logo" />
     </header>
 
     <p class="subtitle">
@@ -133,22 +132,22 @@
     </section>
 
     <section class="cta">
-      <a href="#" onclick="showMail()">Als Google‑Play‑Tester melden</a>
+      <button type="button" onclick="showMail()">Als Google‑Play‑Tester melden</button>
       <span>Kontakt bitte mit deiner <strong>Google‑E‑Mail‑Adresse</strong></span>
     </section>
-
-    <script>
-      function showMail() {
-        const user = 'pdiet';
-        const domain = 'gmx.net';
-        const subject = 'Google%20Play%20App%20Test%20–%20Die%20Physiker%20Diät';
-        window.location.href = `mailto:${user}@${domain}?subject=${subject}`;
-      }
-    </script>
 
     <footer>
       Google Play App‑Tester gesucht · Die Physiker Diät
     </footer>
   </main>
+
+  <script>
+    function showMail() {
+      const user = 'pdiet';
+      const domain = 'gmx.net';
+      const subject = 'Google%20Play%20App%20Test%20–%20Die%20Physiker%20Diät';
+      window.location.href = `mailto:${user}@${domain}?subject=${subject}`;
+    }
+  </script>
 </body>
 </html>

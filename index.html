@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Die Physiker Diät – App Tester gesucht</title>
+  <title>Die Physiker Diät – Google Play App Tester gesucht</title>
   <style>
     :root {
       --green: #2e7d32;
@@ -31,11 +31,16 @@
       display: flex;
       align-items: center;
       gap: 1.5rem;
-      margin-bottom: 2rem;
+      margin-bottom: 2.5rem;
+      padding: 1.25rem 1.75rem;
+      border-radius: 16px;
+      background: linear-gradient(135deg, #f5faf6, #ffffff);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.04);
     }
     header img {
-      height: 56px;
+      height: 64px;
       width: auto;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.08));
     }
     h1 {
       font-size: clamp(1.6rem, 3vw, 2.4rem);
@@ -109,11 +114,15 @@
     </header>
 
     <p class="subtitle">
-      Eine minimalistische App, um Erfolge bei der Gewichtsreduktion einfach zu <strong>tracken</strong> und
-      übersichtlich <strong>darzustellen</strong> – ohne Registrierung, ohne Cloud, ohne Datenspuren.
+      Eine minimalistische <strong>Android‑App</strong>, um Erfolge bei der Gewichtsreduktion einfach zu <strong>tracken</strong> und
+      übersichtlich <strong>darzustellen</strong> – entwickelt für den Einsatz über den <strong>Google Play Store</strong>.
     </p>
 
     <section class="features">
+      <div class="feature">
+        <h3>🧪 Google Play Test</h3>
+        <p>Wir suchen ausschließlich Tester für die geschlossene Testphase über den Google Play Store.</p>
+      </div>
       <div class="feature">
         <h3>🔒 100 % privat</h3>
         <p>Kein Benutzeraccount, keine persönlichen Daten. Alle Informationen bleiben ausschließlich lokal auf deinem Handy.</p>
@@ -129,12 +138,21 @@
     </section>
 
     <section class="cta">
-      <a href="mailto:pdiet@gmx.net?subject=App%20Test%20–%20Die%20Physiker%20Diät">Als App‑Tester melden</a>
-      <span>Bitte mit deiner <strong>Google‑E‑Mail‑Adresse</strong> kontaktieren</span>
+      <a href="#" onclick="showMail()">Als Google‑Play‑Tester melden</a>
+      <span>Kontakt bitte mit deiner <strong>Google‑E‑Mail‑Adresse</strong></span>
     </section>
 
+    <script>
+      function showMail() {
+        const user = 'pdiet';
+        const domain = 'gmx.net';
+        const subject = 'Google%20Play%20App%20Test%20–%20Die%20Physiker%20Diät';
+        window.location.href = `mailto:${user}@${domain}?subject=${subject}`;
+      }
+    </script>
+
     <footer>
-      App‑Tester gesucht · Die Physiker Diät
+      Google Play App‑Tester gesucht · Die Physiker Diät
     </footer>
   </main>
 </body>
